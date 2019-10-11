@@ -1,0 +1,40 @@
+<section >
+    <h1>{{tournament.season.name}}</h1>
+
+    <h3>Start date: {{tournament.season.start_date}}, End date: {{tournament.season.end_date}}</h3>
+    <h5>{{group.tie_break_rule}}</h5>
+
+    {{#each group}}
+    <h4>Group {{this.name}}</h4>
+    <table>
+        <thead>
+            <th>#</th>
+            <th class="team-name">Name</th>
+            <th class="played">P</th>
+            <th class="win">W</th>
+            <th class="draw">D</th>
+            <th class="loss">L</th>
+            <th class="goals-for">F</th>
+            <th class="goals-against">A</th>
+            <th class="goal-diff">GD</th>
+            <th class="points">Pts</th>
+        </thead>
+        <tbody>
+        {{#each this.team_standings}}
+            <tr> 
+                <td class="{{this.current_outcome}}">{{this.rank}}</td>
+                <td class="team-name">{{this.team.name}}</td>
+                <td>{{this.played}}</td>
+                <td>{{this.win}}</td>
+                <td>{{this.draw}}</td>
+                <td>{{this.loss}}</td>
+                <td>{{this.goals_for}}</td>
+                <td>{{this.goals_against}}</td>
+                <td>{{this.goal_diff}}</td>
+                <td>{{this.points}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    {{/each}}
+</section>

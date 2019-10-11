@@ -1,13 +1,11 @@
-const tournamentsModel = require('../models/tournaments');
+const tournamentsModel = require('../models/tournament');
 
 function home(req, res, next) {
     tournamentsModel.getAllTournaments().then(data => {
         const tournaments = data.tournaments;
-        console.log(tournaments);
         
         res.render('home.hbs',  { tournaments });
     }).catch(next);
-
 }
 
 function notFound(req, res) {

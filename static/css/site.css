@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    max-width: 70em;
+    max-width: 56em;
     margin: 0 auto;
     background-color: rgb(166, 205, 245); 
     box-sizing: border-box;
@@ -59,7 +59,7 @@ ul.tournaments {
 
 li.card {
     flex: 0 0 47%;
-    padding: 1em 0;
+    padding: 0;
     margin: 1em auto;
     background-color: #0f553a;
     color: #DDD;
@@ -77,4 +77,50 @@ li.card p {
 li.card a {
     font-size: 2em;
     display: block;
+    padding: 0.5em 0.2em;
+}
+
+li.card:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.8);
+}
+
+table {
+    min-width: 40em;
+}
+
+table thead {
+    border-bottom: 2px solid #111;
+}
+
+table thead th {
+    padding: 0.2em 0.6em;
+
+}
+
+table thead th.team-name,
+table tbody td.team-name {
+    text-align: left;
+    width: 15em;
+}
+
+table tbody {
+
+}
+
+table tbody tr {
+    border-bottom: 1px solid #111;
+}
+
+table tbody td.Playoffs,
+table tbody td.Promotion,
+table tbody td.Champions.League {
+    background-color: #359;
+}
+
+table tbody td.Relegation {
+    background-color: #A31;
+}
+
+table tbody td {
+    text-align: center;
 }
