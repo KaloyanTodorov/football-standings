@@ -4,14 +4,25 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    position: relative;
+}
+
+html::after {
+    content: "";
+    background: url('../images/background.jpeg');
+    opacity: 0.7;
+    top: 0; left: 0; bottom: 0; right: 0;
+    position: absolute;
+    z-index: -1; 
 }
 
 body {
     max-width: 56em;
     margin: 0 auto;
-    background-color: rgb(166, 205, 245); 
+    /* background-color: rgb(166, 205, 245);  */
     box-sizing: border-box;
-    font: 20px/1.5 'Roboto', sans-serif;
+    font: 20px/1.5'Roboto', sans-serif;
+    color: #FFF;
 }
 
 li {
@@ -113,8 +124,17 @@ table tbody tr {
 
 table tbody td.Playoffs,
 table tbody td.Promotion,
+table tbody td.Championship.round,
 table tbody td.Champions.League {
     background-color: #359;
+}
+
+table tbody td.Europa.League.Qualification {
+    background-color: rgb(20, 168, 106);
+}
+
+table tbody td.Qualification.Playoffs {
+    background-color: rgb(240, 225, 22);
 }
 
 table tbody td.Relegation {
