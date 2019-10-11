@@ -1,4 +1,8 @@
 <section >
+
+    {{#if message}}
+        <h3>{{message}}</h3>
+    {{else}}
     <h1>{{tournament.season.name}}</h1>
 
     <h3>Start date: {{tournament.season.start_date}}, End date: {{tournament.season.end_date}}</h3>
@@ -37,4 +41,6 @@
         </tbody>
     </table>
     {{/each}}
+
+    {{/if}}
 </section>

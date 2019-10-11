@@ -6,8 +6,13 @@ function showTrounamentById(req, res, next) {
     tournamentModel.getTournamentById(id).then(tournament => {
         console.log(tournament);
 
-        const group = tournament.standings[0].groups;
+        if(!tournament.standings) {
+            const message = tournament.message;
+            res.render('standings.hbs', { message });
+            return;
+        }
 
+        const group = tournament.standings[0].groups;
 
         res.render('standings.hbs', { tournament, group });
         
