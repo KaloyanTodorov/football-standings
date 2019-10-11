@@ -1,0 +1,14 @@
+<h1>Home</h1>
+
+<ul class="tournaments">
+
+{{#each tournaments }}
+    <li class="card" id="{{this.id}}">
+        <a href="/standings/{{this.id}}">
+            <h3>{{this.name}}</h3>
+            <p>{{this.category.name}}</p>
+        </a>
+    </li>
+{{/each}}
+
+</ul>

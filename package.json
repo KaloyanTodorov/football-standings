@@ -1,0 +1,27 @@
+{
+  "name": "football-standings",
+  "version": "1.0.0",
+  "description": "Some of the most popular tournament standings in Europe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaloyanTodorov/football-standings.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaloyanTodorov/football-standings/issues"
+  },
+  "homepage": "https://github.com/KaloyanTodorov/football-standings#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.4.3",
+    "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0"
+  }
+}
