@@ -3,12 +3,6 @@ const DEFAULT_LINK = "https://api.sportradar.us";
 const SOURCE = "soccer-t3";
 const REGION = "eu";
 const LANG_CODE = "en";
-const TOURNAMENTS = "tournaments";
-
-// https://api.sportradar.us/soccer-t3/eu/en/tournaments/sr:tournament:7/standings.json?
-// api_key=ws67xdhznddznch6fs29cxpp
-
-
 
 module.exports = {
     api: {

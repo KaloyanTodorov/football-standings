@@ -1,5 +1,6 @@
 const tournamentsModel = require('../models/tournament');
 
+
 function home(req, res, next) {
     tournamentsModel.getAllTournaments().then(data => {
         const tournaments = data.tournaments;
