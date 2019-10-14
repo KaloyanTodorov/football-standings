@@ -19,23 +19,29 @@ function postFavouriteTeams(req, res, next) {
                 console.log(result);
             });
 
-            res.redirect('/');
-
+            res.redirect('/fav-table');
             return;
         }
         
         teamModel.create({ name: team, count: 1, users: [user]});
-        res.redirect('/');
+        res.redirect('/fav-table');
     })
 }
 
-function _incrementTeamCount(id) {
-    teamModel.findById(id).then(t => {
-        t.update( { count: t.count++, users: [...user]});
+function getTable(req, res, next) {
+    teamModel.find({}).then(foundTeams => {
+        const sortedTable = foundTeams.sort( (a, b) => b.count - a.count);
+        sortedTable.forEach((team, index) => {
+            team.rank = index + 1;
+        });
+
+        res.render('table.hbs', { sortedTable });
+        
     })
 }
 
 module.exports = {
     getFavouriteTeams,
-    postFavouriteTeams
+    postFavouriteTeams,
+    getTable
 }

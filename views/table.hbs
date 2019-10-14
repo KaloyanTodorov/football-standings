@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Votes count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each sortedTable}}
+        <tr>
+            <td>{{rank}}</td>
+            <td>{{name}}</td>
+            <td>{{count}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

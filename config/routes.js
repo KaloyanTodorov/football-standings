@@ -10,6 +10,7 @@ module.exports = (app) => {
     app.get('/standings/:id', tournamentController.showTrounamentById);
     app.get('/favourite-team', favouritesController.getFavouriteTeams);
     app.post('/favourite-team', favouritesController.postFavouriteTeams);
+    app.get('/fav-table', favouritesController.getTable);
     
 
     app.get('/', pagesController.home);
